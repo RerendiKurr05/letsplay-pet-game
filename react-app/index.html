@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Game — Local Dev</title>
+  <style>
+    body { margin: 0; }
+  </style>
+  <!--
+    This file only exists so `npm run dev` has something to serve locally.
+    It is NOT part of the WordPress build — when WordPress loads the real
+    app, src/main.jsx mounts into the #petgame-root div that the PHP
+    shortcode prints, not this file.
+
+    For local dev without a real WordPress backend, mock-config.js below
+    fakes window.petgameConfig so the app still runs and hits a mock API.
+  -->
+  <script type="module" src="/src/dev/mock-config.js"></script>
+</head>
+<body>
+  <div id="petgame-root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
